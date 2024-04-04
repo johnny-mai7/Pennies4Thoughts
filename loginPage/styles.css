@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed position to prevent scrolling with the page */
+    color: #fff; /* Set default text color to white for better visibility */
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: rgba(14, 6, 6, 0.8); /* Semi-transparent white background for the container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button, .homepage-btn {
+    width: calc(33.33% - 10px); /* Adjusted width to evenly spread the buttons */
+    padding: 10px;
+    background-color: #0056b3; /* Set button background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, .homepage-btn:hover {
+    background-color: #003d80; /* Darker shade of blue on hover */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Added margin-top to separate the buttons */
+}
+
+.homepage-btn {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}

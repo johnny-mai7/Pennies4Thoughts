@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    color: #000; /* Set text color to black */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(36, 37, 37, 0.8); /* Use rgba for transparency */
+    padding: 20px 0;
+    border-bottom: 2px solid #282c30; /* Add a border bottom for visual separation */
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 3rem; /* Adjust font size for large screens */
+    text-align: center; /* Center the heading */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add some bottom margin */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the links */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 20px; /* Add left margin to the first link */
+}
+
+nav ul li:last-child {
+    margin-right: 20px; /* Add right margin to the last link */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Adjust font size for large screens */
+    transition: color 0.3s ease;
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add rounded corners */
+    font-weight: bold; /* Make the text bold */
+}
+
+nav ul li a:hover {
+    background-color: rgba(53, 52, 52, 0.7); /* Darken the background color on hover */
+}
+
+.main-content {
+    color: #000; /* Set text color to black */
+}
+
+.main-content h2 {
+    font-weight: bold; /* Make the heading bold */
+}
+
+.main-content p {
+    line-height: 1.6; /* Increase line height for better readability */
+    font-weight: bold; /* Make the paragraph text bold */
+}
+
+.main-content ul {
+    padding-left: 20px; /* Add left padding to the unordered list */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Decrease padding for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Adjust font size for medium screens */
+    }
+}

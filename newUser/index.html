@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennies for Thoughts - New User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>New User Registration</h1>
+        <form action="#" method="post" class="registration-form" onsubmit="return registerUser()">
+            <div class="input-group">
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <div class="input-group">
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function registerUser() {
+            // Perform validation if needed
+            // Submit the form data to the server for registration
+            // For demonstration purposes, I'm just redirecting to the homepage
+            window.location.href = "C:\\Users\\Johnny\\OneDrive\\Desktop\\j\\important\\Projects\\Pennies4Thoughts\\homePage\\index.html";
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>

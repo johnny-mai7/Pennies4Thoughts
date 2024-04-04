@@ -1,0 +1,236 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, #4e4c4c, #434444);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #fff;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Pomodoro Technique styles */
+.pomodoro-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.timer-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.timer-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Workout/Cardio styles */
+#workout {
+    padding: 30px;
+}
+
+#workout h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.workout-form,
+.cardio-form {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.workout-form h4,
+.cardio-form h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.workout-form label,
+.cardio-form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.workout-form input,
+.cardio-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.workout-form button,
+.cardio-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.workout-form button:hover,
+.cardio-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Workout/Cardio History styles */
+.workout-history {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.workout-history li {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.workout-history li span {
+    font-weight: bold;
+}
+
+.workout-history li .workout-date {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Additional Styling */
+.user-input-display {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}

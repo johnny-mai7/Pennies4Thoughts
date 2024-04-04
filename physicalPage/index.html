@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennies for Thoughts - Physical Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pennies For Thoughts</h1>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\mentalPage\index.html">Mental Health</a></li>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\physicalPage\index.html">Physical Health</a></li>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\AiCounselor\index.html">AI Assistant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="physical-content">
+                <h2>Physical Health</h2>
+                <p>Welcome to our Physical Health section. Here, you'll find resources and tools to support your physical well-being and fitness.</p>
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'workout')">Workout/Cardio</button>
+                    <button class="tablinks" onclick="openTab(event, 'todo')">To-Do List</button>
+                    <button class="tablinks" onclick="openTab(event, 'sleep')">Track Sleep</button>
+                    <button class="tablinks" onclick="openTab(event, 'diet')">Track Diet</button>
+                    <button class="tablinks" onclick="openTab(event, 'pomodoro')">Pomodoro Technique</button>
+                </div>
+
+                <div id="workout" class="tabcontent">
+                    <h3>Workout/Cardio</h3>
+                    <div id="workoutForm">
+                        <!-- Workout form -->
+                        <div id="workoutInput">
+                            <h4>Add Workout</h4>
+                            <label for="workoutName">Workout Name:</label>
+                            <input type="text" id="workoutName" name="workoutName" class="workout-input" required>
+                            <label for="workoutSets">Sets:</label>
+                            <input type="number" id="workoutSets" name="workoutSets" class="workout-input" required>
+                            <label for="workoutReps">Reps:</label>
+                            <input type="number" id="workoutReps" name="workoutReps" class="workout-input" required>
+                            <label for="workoutWeight">Weight (lbs):</label>
+                            <input type="number" id="workoutWeight" name="workoutWeight" class="workout-input" required>
+                            <button onclick="addWorkout()">Add Workout</button>
+                            <h3>Workout History</h3>
+                            <ul id="workout-history" class="workout-history"></ul>
+                        </div>
+                        <!-- Cardio form -->
+                        <div id="cardioInput">
+                            <h4>Add Cardio</h4>
+                            <label for="cardioDuration">Duration (minutes):</label>
+                            <input type="number" id="cardioDuration" name="cardioDuration" class="workout-input" required>
+                            <label for="cardioDistance">Distance (miles):</label>
+                            <input type="number" id="cardioDistance" name="cardioDistance" class="workout-input" required>
+                            <button onclick="addCardio()">Add Cardio</button>
+                            <h4>Cardio History</h4>
+                            <ul id="cardio-history"></ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div id="todo" class="tabcontent">
+                    <h3>To-Do List</h3>
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button onclick="addTask()">Add Task</button>
+                    <ul id="taskList"></ul>
+                </div>
+                
+
+                <div id="sleep" class="tabcontent">
+                    <h3>Track Sleep</h3>
+                    <form id="sleepForm">
+                        <label for="wakeUpTime">Wake-up Time:</label>
+                        <input type="time" id="wakeUpTime" name="wakeUpTime" required><br><br>
+                        
+                        <label for="sleepTime">Sleep Time:</label>
+                        <input type="time" id="sleepTime" name="sleepTime" required><br><br>
+                        
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" required><br><br>
+                        
+                        <button type="button" onclick="calculateRecommendedSleep()">Calculate Recommended Sleep</button>
+                        
+                        <div id="recommendedSleep"></div>
+                        
+                        <hr>
+                        
+                        <h4>Track Your Sleep</h4>
+                        <label for="actualSleepHours">Actual Sleep Hours:</label>
+                        <input type="number" id="actualSleepHours" name="actualSleepHours" min="0" step="0.5" required><br><br>
+                        
+                        <button type="button" onclick="trackSleep()">Track Sleep</button>
+                        
+                        <div id="trackedSleepHours"></div>
+                    </form>
+                </div>
+                
+                
+               <!-- HTML for the Track Diet tab -->
+                <div id="diet" class="tabcontent">
+                    <h3>Track Diet</h3>
+                    <label for="foodName">Food Name:</label>
+                    <input type="text" id="foodName" required><br><br>
+                    <label for="calories">Calories:</label>
+                    <input type="number" id="calories" required><br><br>
+                    <label for="meal">Meal:</label>
+                    <select id="meal">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snack">Snack</option>
+                    </select><br><br>
+                    <button onclick="trackDiet()">Add Food</button><br><br>
+                    <button onclick="calculateCalories()">Calculate Calorie Needs</button><br><br>
+                    <label for="foodList">Food List:</label>
+                    <ul id="foodList"></ul><br><br>
+                    <label for="weightGoal">Weight Goal:</label>
+                    <select id="weightGoal">
+                        <option value="lose">Lose Weight</option>
+                        <option value="gain">Gain Weight</option>
+                    </select><br><br>
+                    <label for="weightChangeRate">Weight Change Rate (lbs per week):</label>
+                    <input type="number" id="weightChangeRate" required><br><br>
+                    <label for="activityLevel">Activity Level:</label>
+                    <select id="activityLevel">
+                        <option value="sedentary">Sedentary (little to no exercise)</option>
+                        <option value="lightlyActive">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                        <option value="moderatelyActive">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                        <option value="veryActive">Very Active (hard exercise/sports 6-7 days/week)</option>
+                        <option value="superActive">Super Active (very hard exercise/sports, physical job, or training twice/day)</option>
+                    </select><br><br>
+                    <div id="resultsContainer"></div>
+                </div>
+
+                <!-- HTML for the Pomodoro Technique tab -->
+                <div id="pomodoro" class="tabcontent">
+                    <h3>Pomodoro Technique</h3>
+                    <div class="pomodoro-timer">
+                        <div id="timer" class="timer">25:00</div> <!-- Timer display -->
+                        <div class="timer-buttons">
+                            <button onclick="startPomodoro()">Start</button>
+                            <button onclick="stopPomodoro()">Stop</button>
+                            <button onclick="resetPomodoro()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

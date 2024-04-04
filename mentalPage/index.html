@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennies for Thoughts - Mental Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pennies For Thoughts</h1>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\mentalPage\index.html">Mental Health</a></li>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\physicalPage\index.html">Physical Health</a></li>
+                    <li><a href="C:\Users\Johnny\OneDrive\Desktop\j\important\Projects\Pennies4Thoughts\AiCounselor\index.html">AI Assistant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="mental-content">
+                <h2>Mental Health</h2>
+                <p>Welcome to our Mental Health section. Here, you'll find resources and tools to support your emotional well-being and inner peace.</p>
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'meditation')">Meditation</button>
+                    <button class="tablinks" onclick="openTab(event, 'journaling')">Journaling</button>
+                    <button class="tablinks" onclick="openTab(event, 'daily-routines')">Daily Tasks</button>
+                    <button class="tablinks" onclick="openTab(event, 'track-habits')">Track Habits</button>
+                    <button class="tablinks" onclick="openTab(event, 'quotes')">Quotes</button>
+                </div>
+
+                <div id="meditation" class="tabcontent">
+                    <h3>Meditation</h3>
+                    <label for="meditation-time">Choose meditation time (in minutes):</label>
+                    <input type="number" id="meditation-time" name="meditation-time" min="1" value="5">
+                    <button onclick="startMeditation()">Start Meditation</button>
+                    <div id="meditation-timer"></div>
+                </div>
+                
+                <div id="journaling" class="tabcontent">
+                    <h3>Journaling</h3>
+                    <div class="lined-paper">
+                        <textarea id="journal-entry" rows="10" cols="50" placeholder="Write your thoughts here..."></textarea>
+                    </div>
+                    <button id="save-entry-btn">Save Entry</button>
+                    <ul id="journal-list"></ul>
+                </div>
+
+                <div id="daily-routines" class="tabcontent">
+                    <h3>Daily Tasks</h3>
+                    <input type="text" id="routine-task" placeholder="Add a new task...">
+                    <button onclick="addRoutineTask()">Add Task</button>
+                    <ul id="routine-list"></ul>
+                </div>
+                
+                <div id="track-habits" class="tabcontent">
+                    <h3>Track Habits</h3>
+                    <input type="text" id="habit-name" placeholder="Enter habit name...">
+                    <select id="habit-action">
+                        <option value="create">Create habit</option>
+                        <option value="break">Break habit</option>
+                    </select>
+                    <button onclick="trackHabit()">Track Habit</button>
+                    <div id="habit-tracker"></div>
+                    <!-- Additional information about habit creation and breaking -->
+                    <div id="habit-info">
+                        <p>The "Track Habits" tab allows users to:</p>
+                        <ul>
+                            <li>Enter a habit name and choose whether they want to create or break the habit.</li>
+                            <li>Add the habit to a tracker, which visually displays the habit name and whether it's being created or broken (using emojis).</li>
+                            <li>After 21 days of tracking a habit, users receive a notification asking if they want to continue or if they're satisfied with their progress.</li>
+                        </ul>
+                        <p>Breaking a habit isn’t as straightforward as merely deciding to stop a certain behavior. It requires time and dedicated effort. You might have heard the popular notion that it takes 21 days to break a habit.</p>
+                    </div>
+                </div>
+                <div id="quotes" class="tabcontent">
+                    <h3>Quotes</h3>
+                    <p id="quote-text"></p>
+                    <button onclick="saveQuote()">Save Quote</button>
+                    <button onclick="displayRandomQuote()">Change Quote</button>
+                </div>
+
+                <div id="journal-entries" class="tabcontent">
+                    <h3>Journal Entries</h3>
+                    <ul id="journal-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
